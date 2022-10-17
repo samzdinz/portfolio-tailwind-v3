@@ -6,7 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tailwind</title>
-    <link href="dist/output.css" rel="stylesheet">
+    <link href="dist/css/final.css" rel="stylesheet">
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body>
@@ -96,7 +105,7 @@
 
                 <div class="w-full self-end px-4 lg:w-1/2 mb-12">
                     <div class="relative mt-12 lg:mt-9 lg:right-0">
-                        <img src="dist/img/syamsudin.png" class="max-w-full mx-auto relative z-10" alt="syamsudin">
+                        <img src="dist/img/samzdinz.png" class="max-w-full mx-auto relative z-10" alt="syamsudin">
                         <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#06b6d4"
